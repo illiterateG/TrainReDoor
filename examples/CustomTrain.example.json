@@ -1,0 +1,48 @@
+{
+  "formatVersion": 1,
+  "openSeconds": 1.2,
+  "closeSeconds": 1.5,
+  "excludedMeshes": [],
+  "bindings": [
+    {
+      "mesh": "MyTrain",
+      "bone": "PassengerDoor_A",
+      "side": "Auto",
+      "deltaMeters": [
+        0,
+        0,
+        0.85
+      ]
+    },
+    {
+      "mesh": "MyTrain_Gls",
+      "bone": "PassengerDoor_A",
+      "side": "Auto",
+      "deltaMeters": [
+        0,
+        0,
+        0.85
+      ]
+    },
+    {
+      "mesh": "MyTrain",
+      "bone": "PassengerDoor_B",
+      "side": "Auto",
+      "deltaMeters": [
+        0,
+        0,
+        -0.85
+      ]
+    },
+    {
+      "mesh": "MyTrain_Gls",
+      "bone": "PassengerDoor_B",
+      "side": "Auto",
+      "deltaMeters": [
+        0,
+        0,
+        -0.85
+      ]
+    }
+  ]
+}

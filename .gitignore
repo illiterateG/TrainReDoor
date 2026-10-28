@@ -1,0 +1,35 @@
+# Build products and locally generated evidence
+# ビルド生成物とローカル検証記録
+**/bin/
+**/obj/
+artifacts/
+.vs/
+.idea/
+*.user
+*.suo
+*.pubxml.user
+*.binlog
+*.log
+.local/
+*.local.props
+**/pdx_account*
+**/credentials*
+**/secrets*
+# Game files and platform-generated identifiers are never source inputs
+# ゲーム本体とプラットフォーム生成 ID はソースに含めません
+*.dll
+*.exe
+*.pdb
+*.cid
+*.cok
+*.blend*
+*.fbx
+*.zip
+
+# EN: Toolchain runtime state is generated locally, not source.
+# JA: ツールチェーンの実行状態はローカル生成物で、ソースではありません。
+**/Library/
+**/Temp/
+*.pid
+*.cache
+*.tmp

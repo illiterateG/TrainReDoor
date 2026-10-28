@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Publish>
+  <ModId Value="164831" />
+  <DisplayName Value="Train ReDoor" />
+  <ShortDescription Value="Animated sliding doors for compatible trains. Enable with a supported train asset. Recommended for game 1.6.*." />
+  <LongDescription># Train ReDoor
+
+Animated sliding doors for compatible trains in Cities: Skylines II.
+
+## How to use
+
+1. Add Train ReDoor and a train asset that supports it to the same playset.
+2. Enable both and restart the game after changing your playset.
+3. Run the train on a line. During boarding, the doors open on the platform side and close when boarding ends.
+
+## What you need
+
+This mod is a shared door controller. Train models are downloaded separately, and the train asset must support Train ReDoor. Installing this mod alone does not add moving doors to every train.
+
+Use only one installed copy of Train ReDoor. If another mod controls the same train's doors, avoid enabling both controllers at the same time.
+
+Recommended game versions: **1.6.***
+
+
+---
+
+# Train ReDoor
+
+Cities: Skylines II の対応車両に、スライドドアの開閉アニメーションを追加します。
+
+## 使い方
+
+1. Train ReDoor と、この Mod に対応した車両アセットを同じプレイセットに追加します。
+2. 両方を有効にし、プレイセットを変更した後はゲームを再起動します。
+3. 車両を路線で運行すると、乗降時にホーム側のドアが開き、乗降終了後に閉まります。
+
+## 必要なもの
+
+本 Mod は共通のドアコントローラーです。車両モデルは別途ダウンロードし、Train ReDoor 対応の車両を使用してください。本 Mod だけで、すべての既存車両に動くドアが追加されるわけではありません。
+
+Train ReDoor は一つだけ有効にしてください。同じ車両のドアを操作する別の Mod がある場合、複数のコントローラーを同時に使用しないでください。
+
+推奨ゲームバージョン：**1.6.***
+
+
+---
+
+# Train ReDoor
+
+为《都市：天际线 2》中支持本模组的列车提供滑动门开关动画。
+
+## 使用方法
+
+1. 将 Train ReDoor 和支持它的列车资产加入同一个播放集。
+2. 启用两者，调整播放集后重新启动游戏。
+3. 让列车在线路上运营：上下客时打开站台一侧的车门，上下客结束后关闭。
+
+## 需要准备
+
+本模组是共用的车门控制器，列车模型需要另外下载，并且列车资产本身需要支持 Train ReDoor。仅安装本模组，不会让所有既有列车自动获得可动门。
+
+请只启用一份 Train ReDoor。如果其他模组也控制同一列车的车门，请避免让多个控制器同时接管。
+
+推荐游戏版本：**1.6.***
+</LongDescription>
+  <Thumbnail Value="Properties/Thumbnail.png" />
+  <Tag Value="Code Mod" />
+  <ForumLink Value="" />
+  <ModVersion Value="1.2.0" />
+  <GameVersion Value="1.6.*" />
+  <ChangeLog>1.2.0
+EN: Recommended game versions updated to 1.6.*. Refreshed player instructions in English, Japanese and Chinese, with new preview artwork. Door behaviour is unchanged.
+JA: 推奨ゲーム版を 1.6.* に変更しました。英語・日本語・中国語のプレイヤー向け説明とプレビュー画像を更新しました。ドアの動作は変更していません。
+中文：推荐游戏版本更新为 1.6.*，更新英、日、中三语玩家说明及预览图。车门运行逻辑保持不变。</ChangeLog>
+  <AccessLevel Value="Unlisted" />
+</Publish>

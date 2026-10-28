@@ -1,0 +1,62 @@
+{
+  "asset": "CompactTrainGlass",
+  "fixtureKind": "synthetic",
+  "bones": [
+    {
+      "name": "ReDoor_L_27_0_640.5",
+      "x": -1.1,
+      "expectedControlled": true,
+      "expectedLeft": true,
+      "expectedZ": 0.6405
+    },
+    {
+      "name": "ReDoor_L_27_1_640.5",
+      "x": -1.1,
+      "expectedControlled": true,
+      "expectedLeft": true,
+      "expectedZ": -0.6405
+    },
+    {
+      "name": "ReDoor_R_27_0_640.5",
+      "x": 1.1,
+      "expectedControlled": true,
+      "expectedLeft": false,
+      "expectedZ": 0.6405
+    },
+    {
+      "name": "ReDoor_R_27_1_640.5",
+      "x": 1.1,
+      "expectedControlled": true,
+      "expectedLeft": false,
+      "expectedZ": -0.6405
+    },
+    {
+      "name": "BodyRoot",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    },
+    {
+      "name": "BogieFront",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    },
+    {
+      "name": "Pantograph",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    },
+    {
+      "name": "Gangway",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    }
+  ]
+}

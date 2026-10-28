@@ -1,0 +1,51 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Configurations>Debug;Release</Configurations>
+    <AssemblyName>TrainReDoor</AssemblyName>
+    <RootNamespace>TrainReDoor</RootNamespace>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Version>1.2.0</Version>
+    <Description>Shared opt-in sliding-door controller for Cities: Skylines II train assets.</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PublishConfigurationPath>Properties/PublishConfiguration.xml</PublishConfigurationPath>
+    <CSIIToolPath Condition="'$(CSIIToolPath)' == ''">$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH'))</CSIIToolPath>
+    <CSIIToolPath Condition="'$(CSIIToolPath)' == ''">$([System.Environment]::GetEnvironmentVariable('CSII_TOOLPATH', 'EnvironmentVariableTarget.User'))</CSIIToolPath>
+  </PropertyGroup>
+  <!-- EN: Official toolchain owns TargetFramework, analyzers and post-processing. -->
+    <!-- JA: 公式ツールチェーンが対象フレームワーク、解析と後処理を管理します。 -->
+  <Import Project="$(CSIIToolPath)/Mod.props" />
+  <Import Project="$(CSIIToolPath)/Mod.targets" />
+  <PropertyGroup>
+    <!-- EN: Normal IDE/CLI builds stage here instead of replacing an installed mod. -->
+    <!-- JA: 通常のビルドはここへ出力し、インストール済み Mod を置換しません。 -->
+    <LocalModsPath>$(MSBuildProjectDirectory)/../../artifacts/staging</LocalModsPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="TrainReDoor.cs;DoorProtocol.cs" />
+    <Reference Include="Game;Colossal.Core;Colossal.Collections;Colossal.IO.AssetDatabase;UnityEngine.CoreModule;Unity.Collections;Unity.Entities;Unity.Mathematics;System.Runtime.Serialization;System.Xml">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="netstandard">
+      <HintPath>$(ManagedPath)/netstandard.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Update="System;System.Core;System.Data"><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="StageTrainReDoorFiles" AfterTargets="DeployWIP">
+    <ItemGroup>
+      <RuntimeFiles Include="../../runtime/**/*" />
+      <CreatorExamples Include="../../examples/**/*" />
+      <CreatorDocs Include="../../docs/**/*" />
+      <RootDocs Include="../../README.md;../../README.en.md;../../README.ja.md;../../README.zh-CN.md;../../LICENSE;../../CHANGELOG.md;../../THIRD_PARTY_NOTICES.md;../../release.json" />
+    </ItemGroup>
+    <Copy SourceFiles="@(RuntimeFiles)" DestinationFiles="@(RuntimeFiles->'$(DeployDir)/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(CreatorExamples)" DestinationFiles="@(CreatorExamples->'$(DeployDir)/examples/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(CreatorDocs)" DestinationFiles="@(CreatorDocs->'$(DeployDir)/docs/%(RecursiveDir)%(Filename)%(Extension)')" />
+    <Copy SourceFiles="@(RootDocs)" DestinationFolder="$(DeployDir)" />
+  </Target>
+  <Target Name="RequireExplicitRemotePublish" BeforeTargets="Publish;RunModPublisher">
+    <Error Condition="'$(EnableRemotePublish)' != 'true'" Text="Remote publication is disabled. Read docs/PUBLISHING.md and explicitly set EnableRemotePublish=true only when authorized to upload." />
+  </Target>
+</Project>

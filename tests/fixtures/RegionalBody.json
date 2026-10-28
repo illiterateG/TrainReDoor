@@ -1,0 +1,62 @@
+{
+  "asset": "RegionalBody",
+  "fixtureKind": "synthetic",
+  "bones": [
+    {
+      "name": "ReDoor_L_01_0_850",
+      "x": -1.4,
+      "expectedControlled": true,
+      "expectedLeft": true,
+      "expectedZ": 0.85
+    },
+    {
+      "name": "ReDoor_L_01_1_850",
+      "x": -1.4,
+      "expectedControlled": true,
+      "expectedLeft": true,
+      "expectedZ": -0.85
+    },
+    {
+      "name": "ReDoor_R_01_0_850",
+      "x": 1.4,
+      "expectedControlled": true,
+      "expectedLeft": false,
+      "expectedZ": 0.85
+    },
+    {
+      "name": "ReDoor_R_01_1_850",
+      "x": 1.4,
+      "expectedControlled": true,
+      "expectedLeft": false,
+      "expectedZ": -0.85
+    },
+    {
+      "name": "BodyRoot",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    },
+    {
+      "name": "BogieFront",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    },
+    {
+      "name": "Pantograph",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    },
+    {
+      "name": "Gangway",
+      "x": 0,
+      "expectedControlled": false,
+      "expectedLeft": false,
+      "expectedZ": 0
+    }
+  ]
+}

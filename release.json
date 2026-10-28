@@ -1,0 +1,15 @@
+{
+  "name": "Train ReDoor",
+  "assemblyName": "TrainReDoor",
+  "assemblyVersion": "1.2.0.0",
+  "releaseVersion": "1.2.0",
+  "releaseDate": "2026-10-25",
+  "prerelease": false,
+  "gameBuildUsed": "1.6.2f1",
+  "gameRuntimeVerified": false,
+  "paradoxModId": 164831,
+  "repositoryUrl": null,
+  "license": "MIT",
+  "recommendedGameVersion": "1.6.*",
+  "paradoxUrl": "https://mods.paradoxplaza.com/mods/164831/Windows"
+}
