@@ -39,7 +39,7 @@ Official source generation and post-processing remain enabled. Ordinary builds s
 
 The controller supports translation-only sliding doors on eligible Train entities. It does not implement rotating doors, staged plug-door motion, sounds, collisions, departure interlocks or passenger routing. Static previews do not provide boarding signals. Per-asset JSON discovery is not implemented; one controller-side configuration is read at load time.
 
-The local record confirms publication of 1.2.0 on 2026-10-25. Code/configuration tests and synthetic cases are recorded separately from gameplay. In-game boarding and subscribed-package verification have not been recorded. The recommended version pattern does not claim that every 1.6 patch was tested. See [validation status](docs/VALIDATION.md).
+The local record confirms publication of 1.2.0 on 2026-10-25. Code/configuration tests and synthetic cases are recorded separately from gameplay. As confirmed by the maintainer on 2026-11-02, in-game boarding and full subscribed-package verification are complete. The recommended version pattern does not claim that every 1.6 patch was tested. See [validation status](docs/VALIDATION.md).
 
 ## Language and license
 

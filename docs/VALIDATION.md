@@ -12,18 +12,24 @@ Synthetic fixtures exercise names, side selection and travel. They are hand-auth
 
 The local official-publisher receipt dated 2026-10-25 confirms a successful NewVersion upload for Mod ID 164831, version 1.2.0, recommended pattern 1.6.*, with Unlisted visibility. This is a historical publication record, not a fresh remote visibility check.
 
-Remote upload success and subscribed-package operation are separate checks. No game boarding or subscribed-package verification has been recorded for this release.
+## Gameplay and subscribed-package validation
 
-## Gameplay checklist
+On 2026-11-02, the maintainer confirmed that actual in-game boarding and full platform-subscribed-package verification are complete for this release. This records the maintainer's confirmation; the confirmation date is not the test execution date. Detailed game/asset versions, test line/save, logs and screenshots were not supplied with this update.
 
-- [ ] Record game, asset and controller versions and the test line/save.
-- [ ] Confirm one controller copy and the expected Loaded/configuration path.
-- [ ] Check Bound logs for body and separate glass; matching alone does not prove skinning.
-- [ ] Test left/right platforms, reversed consists and all car variants.
-- [ ] Inspect panel/glass alignment, closing after boarding and pause/resume.
-- [ ] Test independent dual-side boarding when a reproducible scenario exists.
-- [ ] Check unrelated bones/assets, save/reload and restart.
-- [ ] Inspect multiple views for geometry, skinning, normals, materials and glass.
-- [ ] Install the platform-subscribed package and test it independently.
+Publication, engineering checks and gameplay validation remain separate records.
+
+## Future gameplay regression checklist
+
+The following is a reusable reference for future tests, not an outstanding acceptance checklist for the completed validation above.
+
+- Record game, asset and controller versions and the test line/save.
+- Confirm one controller copy and the expected Loaded/configuration path.
+- Check Bound logs for body and separate glass; matching alone does not prove skinning.
+- Test left/right platforms, reversed consists and all car variants.
+- Inspect panel/glass alignment, closing after boarding and pause/resume.
+- Test independent dual-side boarding when a reproducible scenario exists.
+- Check unrelated bones/assets, save/reload and restart.
+- Inspect multiple views for geometry, skinning, normals, materials and glass.
+- Install the platform-subscribed package and test it independently.
 
 Only mark checks actually performed. The recommended version pattern is not a claim that every matching patch was tested. No departure interlock, sound, collision or passenger-routing feature should be advertised.
