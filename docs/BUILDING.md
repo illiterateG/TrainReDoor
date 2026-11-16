@@ -19,6 +19,6 @@ The build stages to `artifacts/staging/TrainReDoor` and does not replace an inst
 
 Package requires tests matching the staged DLL and completed local validation. It refuses an existing destination; use a fresh `-OutputDirectory artifacts/packages-02` for another local package. Outputs include a runtime ZIP, source ZIP, clean GitHub tree, a flat Paradox content directory with separate Properties metadata, and SHA256SUMS.txt.
 
-The current compile environment uses game 1.6.2f1, Unity 2022.3.62f2 and Entities 1.3.10. These are build records, not permanent version requirements or compatibility promises. Test and document gameplay separately. Read [publishing](PUBLISHING.md) before any remote action.
+The current compile environment uses game 1.6.2f1, Unity 2022.3.62f2 and Entities 1.3.10. These are build records, not permanent version requirements or compatibility promises. Version 1.2.0 has separately completed in-game acceptance and stability validation, as confirmed by the maintainer; see the [validation record](VALIDATION.md). Repeat gameplay checks for future runtime changes. Read [publishing](PUBLISHING.md) before any remote action.
 
 Source packages exclude toolchain-generated Library/Temp directories and PID/cache files in addition to bin/obj/artifacts. These files are not source inputs.

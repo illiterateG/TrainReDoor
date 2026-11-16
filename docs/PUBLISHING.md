@@ -19,7 +19,7 @@ try {
 
 The command above uploads to Paradox; it is not a local packaging command. NewVersion uploads a new package for the existing ID. Update changes metadata only. Publish creates a new listing and should not be used for this existing mod. Keep account credentials outside source files, profiles and command lines.
 
-For the prepared Paradox directory, Properties contains publication metadata and the thumbnail; content/TrainReDoor is the flat payload folder passed to the official publisher. After upload, verify the subscribed package separately before claiming gameplay compatibility.
+For the prepared Paradox directory, Properties contains publication metadata and the thumbnail; content/TrainReDoor is the flat payload folder passed to the official publisher. Version 1.2.0 has completed in-game acceptance and stability validation, including subscribed-package verification, as confirmed by the maintainer. After uploading future packages, repeat the subscribed-package checks and update the validation record.
 
 ## Private GitHub source repository
 

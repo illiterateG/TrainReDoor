@@ -2,6 +2,8 @@
 
 Animated sliding doors for compatible trains in Cities: Skylines II.
 
+In-game acceptance and stability validation are complete, as confirmed by the maintainer. Actual boarding and the platform-subscribed package have also been verified.
+
 ## How to use
 
 1. Add Train ReDoor and a train asset that supports it to the same playset.

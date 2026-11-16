@@ -14,9 +14,9 @@ The local official-publisher receipt dated 2026-10-25 confirms a successful NewV
 
 ## Gameplay and subscribed-package validation
 
-On 2026-11-02, the maintainer confirmed that actual in-game boarding and full platform-subscribed-package verification are complete for this release. This records the maintainer's confirmation; the confirmation date is not the test execution date. Detailed game/asset versions, test line/save, logs and screenshots were not supplied with this update.
+Version 1.2.0 has completed in-game acceptance and stability validation, as confirmed by the maintainer. Actual in-game boarding and full platform-subscribed-package verification are also complete.
 
-Publication, engineering checks and gameplay validation remain separate records.
+This status records the maintainer's completed in-game acceptance. Engineering checks, publication and gameplay results are documented separately. New train assets and future releases should run the regression checks below.
 
 ## Future gameplay regression checklist
 

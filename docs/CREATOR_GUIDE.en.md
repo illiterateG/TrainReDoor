@@ -2,7 +2,7 @@
 
 [English](CREATOR_GUIDE.en.md) · [日本語](CREATOR_GUIDE.ja.md) · [简体中文](CREATOR_GUIDE.zh-CN.md)
 
-For release 1.2.0 / assembly 1.2.0.0. This documents the implementation. See the [validation record](VALIDATION.md) for the distinction between code checks, publication and gameplay.
+For release 1.2.0 / assembly 1.2.0.0, which has completed in-game acceptance and stability validation, as confirmed by the maintainer. This guide covers integration requirements; creators should validate each new train asset on a running line. See the [validation record](VALIDATION.md).
 
 ## Model and import requirements
 

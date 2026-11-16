@@ -1,5 +1,15 @@
 # Changelog
 
+## Documentation update — 2026-11-17
+
+- Completed in-game acceptance and stability validation, as confirmed by the maintainer. Actual boarding and full platform-subscribed-package verification are complete.
+- Align English, Japanese and Simplified Chinese documentation and release notes with the completed validation; remove outdated wording that described gameplay checks as pending.
+- Clarify checks for new train assets and future regressions. Runtime version 1.2.0 / assembly 1.2.0.0 and door-control behaviour are unchanged.
+
+日本語：ゲーム内の動作確認および安定性検証を完了し、メンテナーが確認済みです。実際の乗降動作と購読パッケージも検証済みです。三言語の文書と更新履歴から未検証・確認待ちの古い表現を修正しました。新規車両と今後の回帰確認の手順を整理し、実行コードとバージョンは変更していません。
+
+中文：已经完成稳定性验证及游戏内验收，并经维护者确认，实际乘降和平台订阅包的完整验证均已完成。同步修改英、日、中三语文档和更新说明，清理“尚未验收／未执行”等过时措辞，明确新车包及后续版本的回归检查要求。运行时代码、版本号及车门控制逻辑不变。
+
 ## 1.2.0 — 2026-10-25
 
 - Recommend Cities: Skylines II **1.6.*** in platform metadata; compilation still uses installed build 1.6.2f1.

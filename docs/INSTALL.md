@@ -1,5 +1,7 @@
 # Install
 
+Version 1.2.0 has completed in-game acceptance and stability validation, as confirmed by the maintainer. You can use the [Paradox Mods listing (ID 164831)](https://mods.paradoxplaza.com/mods/164831/Windows) or install the runtime ZIP manually as described below.
+
 1. Exit the game and download the runtime ZIP attached to a release. The automatic GitHub source archive is not an installer.
 2. Find the actual game user-data directory. The usual Windows default is `%USERPROFILE%/AppData/LocalLow/Colossal Order/Cities Skylines II/`; launch settings can override it.
 3. Extract the top-level TrainReDoor folder under Mods, so the DLL is at `Mods/TrainReDoor/TrainReDoor.dll` and the JSON is beside it. Do not add an extra nesting level or modify the game's Managed directory.
@@ -9,4 +11,4 @@ The Loaded log prints the configuration path actually used. Configuration is rea
 
 To uninstall, exit and remove the local copy from all scanned mod locations, or disable the subscribed copy. The mod changes visual bone poses and does not require editing game files. A static preview has no boarding signals.
 
-日本語：ゲーム終了後、実行用 ZIP の TrainReDoor フォルダーを実際のユーザーデータ内の Mods に配置し、対応車両と一つのコントローラーを有効にします。設定変更後は再起動してください。設定パスは Loaded ログで確認できます。
+日本語：1.2.0 はゲーム内の動作確認および安定性検証を完了しています。ゲーム終了後、実行用 ZIP の TrainReDoor フォルダーを実際のユーザーデータ内の Mods に配置し、対応車両と一つのコントローラーを有効にします。設定変更後は再起動してください。設定パスは Loaded ログで確認できます。

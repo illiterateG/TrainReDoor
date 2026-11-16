@@ -19,7 +19,7 @@ try {
 
 这条命令会实际上传到 PDX，不是本地打包。NewVersion 上传已有条目的新包；Update 只改资料；Publish 用于创建条目，本模组更新不使用它。账号凭证不得放入源码、profile 或命令行。
 
-准备好的 Paradox 目录中，Properties 存放资料和封面；content/TrainReDoor 是发布器使用的平面内容目录。上传后还需单独验收平台订阅包。
+准备好的 Paradox 目录中，Properties 存放资料和封面；content/TrainReDoor 是发布器使用的平面内容目录。1.2.0 已完成游戏内验收及稳定性验证，平台订阅包也已验收，并经维护者确认。后续上传新包后，应重新检查订阅包并更新验证记录。
 
 ## GitHub 私有源码仓库
 
