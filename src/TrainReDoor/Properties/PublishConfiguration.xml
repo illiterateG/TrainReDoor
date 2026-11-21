@@ -66,11 +66,11 @@ Train ReDoor は一つだけ有効にしてください。同じ車両のドア�
   <Thumbnail Value="Properties/Thumbnail.png" />
   <Tag Value="Code Mod" />
   <ForumLink Value="" />
-  <ModVersion Value="1.2.0" />
+  <ModVersion Value="1.2.1" />
   <GameVersion Value="1.6.*" />
-  <ChangeLog>1.2.0
-EN: Recommended game versions updated to 1.6.*. Refreshed player instructions in English, Japanese and Chinese, with new preview artwork. Door behaviour is unchanged.
-JA: 推奨ゲーム版を 1.6.* に変更しました。英語・日本語・中国語のプレイヤー向け説明とプレビュー画像を更新しました。ドアの動作は変更していません。
-中文：推荐游戏版本更新为 1.6.*，更新英、日、中三语玩家说明及预览图。车门运行逻辑保持不变。</ChangeLog>
+  <ChangeLog>1.2.1
+EN: Suppress repeated door-binding log messages during asset editing while reporting new binding layouts.
+JA: アセット編集時に同じドアバインドのログが繰り返されるのを防ぎ、新しい構成は引き続き記録します。
+中文：资产编辑时相同的门骨绑定只记录一次，新出现的绑定结果仍会记录。</ChangeLog>
   <AccessLevel Value="Unlisted" />
 </Publish>

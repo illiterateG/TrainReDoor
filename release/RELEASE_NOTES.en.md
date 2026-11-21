@@ -1,5 +1,8 @@
-# Train ReDoor 1.2.0
+# Train ReDoor 1.2.1
 
-Recommended game versions: 1.6.*. Updated player descriptions in English, Japanese and Chinese, and included the supplied preview image as both thumbnail and runtime artwork. Door behaviour is unchanged.
+- Deduplicates `Bound` messages per mesh and resolved set of door bindings. Identical bindings stay quiet when the editor replaces a render entity. A new binding layout is still reported, even when the number of door bones stays the same.
+- The existing door animation, binding configuration and ECS synchronization retain their 1.2.0 behavior.
 
-Paradox Mod ID: 164831. Visibility remains Unlisted. Assembly version: 1.2.0.0. Compilation uses game 1.6.2f1. In-game acceptance and stability validation are complete, as confirmed by the maintainer. Actual boarding and the platform-subscribed package have also been verified.
+The official build and automated checks passed on Cities: Skylines II 1.6.4f1. An instrumented build handled door bindings during same-save on/off profiling. Repeated reimport logging was covered by a regression test against the built DLL; an in-game editor reimport comparison remains unverified.
+
+For manual installation, download `TrainReDoor_1.2.1.zip` and use the [installation guide](../docs/INSTALL.md).

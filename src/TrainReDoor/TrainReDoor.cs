@@ -16,8 +16,8 @@ using UnityEngine;
 
 [assembly: System.Reflection.AssemblyTitle("Train ReDoor")]
 [assembly: System.Reflection.AssemblyDescription("Shared opt-in sliding-door controller for train assets")]
-[assembly: System.Reflection.AssemblyVersion("1.2.0.0")]
-[assembly: System.Reflection.AssemblyFileVersion("1.2.0.0")]
+[assembly: System.Reflection.AssemblyVersion("1.2.1.0")]
+[assembly: System.Reflection.AssemblyFileVersion("1.2.1.0")]
 namespace TrainReDoor
 {
     public sealed class Mod : IMod
@@ -49,7 +49,7 @@ namespace TrainReDoor
             // JA: ゲームのアニメーション準備がボーンバッファを読む前に姿勢を書き込みます。
             updateSystem.UpdateBefore<TrainDoorSystem, AnimatedSystem.Prepare>(SystemUpdatePhase.Rendering);
             loaded = true;
-            Debug.Log("[Train ReDoor 1.2.0] Loaded. All Train assets can opt in with ReDoor bones or exact JSON bindings; no vehicle-name whitelist. Config: " + path);
+            Debug.Log("[Train ReDoor 1.2.1] Loaded. All Train assets can opt in with ReDoor bones or exact JSON bindings; no vehicle-name whitelist. Config: " + path);
         }
         public void OnDispose()
         {
@@ -73,6 +73,8 @@ namespace TrainReDoor
         private sealed class CachedBinding { public Binding[] Values; public long RefreshAt; }
         private struct Opening { public float Left, Right; }
         private readonly Dictionary<Entity, CachedBinding> bindings = new Dictionary<Entity, CachedBinding>();
+        private readonly Dictionary<string, List<Binding[]>> loggedBindings =
+            new Dictionary<string, List<Binding[]>>(StringComparer.Ordinal);
         private readonly Dictionary<Entity, Opening> openings = new Dictionary<Entity, Opening>();
         private readonly List<Entity> expired = new List<Entity>();
         private EntityQuery query;
@@ -83,7 +85,8 @@ namespace TrainReDoor
         private long ticks;
         public void Configure(Settings value)
         {
-            value.Validate(); settings = value; bindings.Clear(); openings.Clear(); lastTime = -1; ticks = 0; Enabled = true;
+            value.Validate(); settings = value; bindings.Clear(); loggedBindings.Clear(); openings.Clear();
+            lastTime = -1; ticks = 0; Enabled = true;
         }
         // EN: Eligibility comes from runtime components, never a vehicle brand or asset title.
         // JA: 対象は実行時コンポーネントで判断し、車種名やアセット名では制限しません。
@@ -125,10 +128,41 @@ namespace TrainReDoor
             // EN: Cache misses too; retry periodically after editor reimports or buffer regeneration.
             // JA: 未一致もキャッシュし、再インポートやバッファ再生成に備えて定期的に再確認します。
             bindings[mesh] = new CachedBinding { Values = result, RefreshAt = ticks + (result.Length > 0 ? 300 : 150) };
-            if (result.Length > 0 && (cached == null || cached.Values.Length != result.Length))
+            if (result.Length > 0 && (cached == null || !SameBindings(cached.Values, result)) &&
+                RememberLoggedBinding(meshName, result))
                 Debug.Log("[Train ReDoor] Bound " + result.Length + " moving door bones on " + meshName);
             return result;
         }
+        // EN: Editing can replace render entities, so track logged layouts separately from the entity cache.
+        // JA: 編集時に描画エンティティが置き換わるため、ログ済みの構成はエンティティキャッシュと別に記録します。
+        private bool RememberLoggedBinding(string meshName, Binding[] result)
+        {
+            if (!loggedBindings.TryGetValue(meshName, out List<Binding[]> previous))
+            {
+                previous = new List<Binding[]>();
+                loggedBindings.Add(meshName, previous);
+            }
+            foreach (Binding[] layout in previous)
+                if (SameBindings(layout, result)) return false;
+
+            previous.Add(result);
+            return true;
+        }
+
+        private static bool SameBindings(Binding[] first, Binding[] second)
+        {
+            if (first.Length != second.Length) return false;
+            for (int i = 0; i < first.Length; ++i)
+            {
+                Binding a = first[i];
+                Binding b = second[i];
+                if (a.Index != b.Index || a.BindIndex != b.BindIndex || a.Spec.Left != b.Spec.Left ||
+                    a.Spec.X != b.Spec.X || a.Spec.Y != b.Spec.Y || a.Spec.Z != b.Spec.Z ||
+                    a.Spec.Source != b.Spec.Source) return false;
+            }
+            return true;
+        }
+
         // EN: Restore the closed bind pose when the controller is disposed.
         // JA: コントローラー終了時は閉扉状態のバインド姿勢へ戻します。
         public void RestoreClosedPoses()
@@ -136,7 +170,7 @@ namespace TrainReDoor
             EntityManager.CompleteAllTrackedJobs();
             using (NativeArray<Entity> entities = query.ToEntityArray(Allocator.Temp))
                 for (int i = 0; i < entities.Length; ++i) Apply(entities[i], new Opening(), true);
-            bindings.Clear(); openings.Clear();
+            bindings.Clear(); loggedBindings.Clear(); openings.Clear();
         }
         private bool Apply(Entity entity, Opening opening, bool restore)
         {

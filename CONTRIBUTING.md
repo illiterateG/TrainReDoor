@@ -9,6 +9,6 @@ Run official build/post-processing, tests, local validation and packaging. Chang
 日本語：ソースコメント・ログ・主文書は英語を優先し、意味のあるコメントの直後に日本語を追加してください。識別子と JSON キーは英語のまま維持します。汎用の例を使用し、合成ケースを実モデル検証と表現しないでください。
 
 
-For this repository, keep Private visibility. The maintainer reviews Markdown, configuration, scripts and source text before the initial push. Keep the reviewed file manifest with the local publication record.
+Upload reviewed source and approved release assets to the existing public repository. Keep the reviewed file manifest with the local publication record.
 
-中文：仓库保持 Private；首次推送前审阅 Markdown、配置、脚本和源码文本，按本地文件清单确认实际上传范围。英文为主，日文其次，中文第三。
+中文：现有仓库为公开仓库。上传前审阅 Markdown、配置、脚本和源码文本，按文件清单确认上传范围。英文为主，日文其次，中文第三。

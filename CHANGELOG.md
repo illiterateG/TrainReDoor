@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.1 — 2026-11-22
+
+- Log each mesh and distinct set of resolved door bindings once per controller session. Rebuilt mesh entities with identical bindings no longer repeat the message.
+- Retain diagnostics when side, travel, or bone indices change. Door animation and ECS synchronization retain the 1.2.0 behavior.
+
+日本語：メッシュごとに同じドアバインドのログをセッション内で一度だけ記録します。側、移動量、ボーンインデックスの変更は引き続き記録します。
+
+中文：同一网格的相同门骨绑定在一次控制器会话中只记录一次。侧别、行程或骨骼索引变化时，仍会记录新绑定。
+
 ## Documentation update — 2026-11-17
 
 - Completed in-game acceptance and stability validation, as confirmed by the maintainer. Actual boarding and full platform-subscribed-package verification are complete.

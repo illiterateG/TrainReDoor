@@ -21,12 +21,12 @@ The command above uploads to Paradox; it is not a local packaging command. NewVe
 
 For the prepared Paradox directory, Properties contains publication metadata and the thumbnail; content/TrainReDoor is the flat payload folder passed to the official publisher. Version 1.2.0 has completed in-game acceptance and stability validation, including subscribed-package verification, as confirmed by the maintainer. After uploading future packages, repeat the subscribed-package checks and update the validation record.
 
-## Private GitHub source repository
+## GitHub source repository
 
-Create the repository with **Private** visibility. Upload only the reviewed source tree, not the workspace root or its private history. Keep the English README as the default; link Japanese next and Chinese third. Preserve the MIT license.
+The existing GitHub repository is public. Upload the reviewed source tree and approved release assets. Keep the English README as the default; link Japanese next and Chinese third. Preserve the MIT license.
 
 The repository includes source, build scripts, configuration examples, synthetic fixtures, documentation and preview images. Exclude bin, obj, artifacts, Library, Temp, PID/cache files, game/Unity/compiler binaries, credentials, local logs and model archives. Git ignore patterns and the source package cleanup cover these generated paths.
 
 The maintainer reviews all Markdown and other text/source files before the first push. A local SHA-256 manifest identifies the exact reviewed files. Repository creation, push, releases and changes to visibility are separate remote actions; they are not performed by the normal build scripts.
 
-If a GitHub release is later requested, tag the corresponding source commit, attach the runtime ZIP and checksums, and describe the actual validation scope. Source archives are for development, not player installation. A private repository and its releases should retain their intended visibility.
+If a GitHub release is later requested, tag the corresponding source commit, attach the runtime ZIP and checksums, and describe the actual validation scope. Source archives are for development, not player installation. Treat repository visibility changes as a separate action.

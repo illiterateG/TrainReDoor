@@ -96,7 +96,7 @@ internal static class ProtocolTests
         for (int i = 0; i <= 100; ++i) { float eased = DoorProtocol.Ease(i / 100f); if (eased < previous) throw new Exception("Nonmonotonic easing"); previous = eased; }
         Check(true, "Easing is monotonic through the complete door stroke");
         Assembly assembly = Assembly.LoadFrom(modPath);
-        Check(assembly.GetName().Name == "TrainReDoor" && assembly.GetName().Version.ToString() == "1.2.0.0", "Actual delivery assembly identity and version");
+        Check(assembly.GetName().Name == "TrainReDoor" && assembly.GetName().Version.ToString() == "1.2.1.0", "Actual delivery assembly identity and version");
         bool imod = false;
         foreach (Type iface in assembly.GetType("TrainReDoor.Mod", true).GetInterfaces()) if (iface.FullName == "Game.Modding.IMod") imod = true;
         Check(imod, "Actual delivery implements the installed game's IMod");

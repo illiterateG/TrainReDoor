@@ -86,7 +86,7 @@ ReDoor_R_01_1_850
 ## 6. 安装、运营检查与排错
 
 
-日志应看到 `[Train ReDoor 1.2.0] Loaded`，以及相应网格的 `Bound ... moving door bones`。日志里的配置路径才是实际读取位置。Bound 只证明找到了骨，不能证明蒙皮或方向正确。
+日志应看到 `[Train ReDoor 1.2.1] Loaded`，以及相应网格的 `Bound ... moving door bones`。日志里的配置路径才是实际读取位置。Bound 只证明找到了骨，不能证明蒙皮或方向正确。
 
 | 现象 | 优先检查 |
 | --- | --- |

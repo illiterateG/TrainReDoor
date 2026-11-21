@@ -26,7 +26,12 @@ $configExe = Join-Path $testDir 'ConfigurationExamplesTests.exe'
 Invoke-Compiler (@('/nologo','/noconfig','/nostdlib+','/target:exe',"/out:$configExe","/reference:$library") + $refs + (Join-Path $RepoRoot 'tests\ConfigurationExamplesTests.cs'))
 & $configExe $library $managed (Join-Path $RepoRoot 'runtime\TrainReDoor.json') (Join-Path $RepoRoot 'examples\CustomTrain.example.json') 2>&1 | Tee-Object -FilePath (Join-Path $logDir 'ConfigurationExamplesTests.log')
 if ($LASTEXITCODE -ne 0) { throw 'Bundled configuration examples failed actual DLL parsing' }
+$logTestExe = Join-Path $testDir 'BindingLogRegression.exe'
+Invoke-Compiler (@('/nologo','/noconfig','/nostdlib+','/target:exe',"/out:$logTestExe") + $refs + (Join-Path $RepoRoot 'tests\BindingLogRegression.cs'))
+& $logTestExe $library $managed 2>&1 | Tee-Object -FilePath (Join-Path $logDir 'BindingLogRegression.log')
+if ($LASTEXITCODE -ne 0) { throw 'Binding log regression checks failed' }
 [ordered]@{
+    binding_log_checks=[int]([regex]::Match((Get-Content -LiteralPath (Join-Path $logDir 'BindingLogRegression.log') -Raw),'BINDING_LOG_CHECKS=(\d+)').Groups[1].Value)
     dll_sha256=(Get-FileHash -LiteralPath $library -Algorithm SHA256).Hash.ToLower()
     protocol_checks=[int]([regex]::Match((Get-Content -LiteralPath (Join-Path $logDir 'ProtocolTests.log') -Raw),'TOTAL_PASS=(\d+)').Groups[1].Value)
     synthetic_asset_cases=4

@@ -4,8 +4,8 @@
 
 A shared sliding-door controller for compatible trains in **Cities: Skylines II**. During boarding, doors follow the game's left/right platform signals. Train models are installed separately.
 
-- Mod version: **1.2.0**; assembly: **1.2.0.0**.
-- Recommended game versions: **1.6.***; recorded compilation build: **1.6.2f1**.
+- Mod version: **1.2.1**; assembly: **1.2.1.0**.
+- Recommended game versions: **1.6.***; recorded compilation build: **1.6.4f1**.
 - [Paradox Mods — ID 164831](https://mods.paradoxplaza.com/mods/164831/Windows).
 
 ## Players

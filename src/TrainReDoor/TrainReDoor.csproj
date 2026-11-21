@@ -6,7 +6,7 @@
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <Description>Shared opt-in sliding-door controller for Cities: Skylines II train assets.</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PublishConfigurationPath>Properties/PublishConfiguration.xml</PublishConfigurationPath>
